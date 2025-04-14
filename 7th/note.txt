@@ -1,0 +1,191 @@
+Functions or Method
+
+
+function is a block of code
+
+
+input ----->   thermometer  ---> Output
+
+         mobile volume button
+                 TV remote
+
+
+
+  public static returnType functionNames(type arg1,type arg2...){
+    //operations
+}
+
+
+returnType ==> int ,float,string
+
+
+int --> integer type variables
+
+float --> float type variables
+
+void --> means no return 
+
+
+public  and static keywords
+
+
+1) Take user input and print user name by function.
+
+
+
+public class Funtions {
+
+    public static void printMyName(String name) {
+        System.out.println(name);
+        return;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+
+        printMyName(name);
+    }
+
+}
+
+
+functionNames  will be your choice
+
+printMyName(){
+
+}
+
+
+
+type arg 1, type arg 2
+
+type will be int float string
+
+int age,float temperature,
+
+========================================================================================
+
+What happen in Memory?
+
+
+p s v printMyName(){
+
+}
+
+
+public static void main(){
+ call --> printMyName();
+} 
+
+
+always store data in memory a stack format
+
+
+
+
+
+printMyName()
+   main()
+
+   stack
+
+=========================================================================
+
+2) Make a function to add 2 numbers and return the sum
+
+
+
+public class Funtions {
+
+    public static int  calculateSum(int a,int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a  = sc.nextInt();
+        int b  = sc.nextInt();
+
+        int sum  = calculateSum(a, b);
+        System.out.println("Sum of two number is "+sum);
+    }
+
+}
+
+
+======================================================================================
+3) Make a function to multiply 2 numbers and return the product.
+
+
+
+public class Funtions {
+
+    public static int calculteProducut(int a,int b){
+        return a*b;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a  = sc.nextInt();
+        int b  = sc.nextInt();
+
+       
+        System.out.println("Product of two number is " + calculteProducut(a, b));
+    }
+
+}
+
+=================================================================================
+
+4)Find the factorial of a number.
+
+
+n! = n(n-1)(n-2)(n-3).....*1;
+
+0!=1 
+1! = 1
+2! =  1*2 = 2
+3! = 1*2*3 = 6
+
+
+
+public class Funtions {
+
+    public static void printFactorial(int n){
+      
+    
+        if(n<0){
+            System.out.println("Invalid Number");
+            return;
+        }
+
+        int factorial = 1;
+        
+        for(int i=n;i>=1;i--){
+           factorial = factorial * i;
+        }
+       System.out.println(factorial);
+       return;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        printFactorial(n);
+    }
+
+}
+
+
+==================================================
+
+Different between Function and Method
+
+
+        Functions                                       Methods
+
+Function call directly                     We will call methods by through class of objects
+

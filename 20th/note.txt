@@ -1,0 +1,75 @@
+===============================BackTracking================================
+
+
+
+Ghadi detergent Powder
+
+
+"Pehle istemaal karein,fir vishwas karein"
+
+
+Find all Possible Solutions & use the one you want.
+
+
+Arrange them in a single line (Three children Arrange in a line )
+
+
+    A       B        C
+
+
+
+1  2  3
+ 
+A -->B  C    ABC 
+  -->C  B    ACB  
+
+
+B -->A  C    BAC 
+  -->C  A    BCA   
+
+
+C -->A  B    CAB 
+  -->B  A    CBA    
+
+C<B<A 
+
+
+3! = 6
+4! = 24
+5! = 100 
+
+
+
+
+ 
+//Time complexity = O(n&n!)
+public class Backtracking{
+    public static void printPermutation(String str,String perm,int idx){
+        if(str.length() == 0){
+            System.out.println(perm);
+            return;
+        }
+      for(int i=0; i<str.length();i++){
+        char currChar = str.charAt(i);
+        String newStr = str.substring(0,i) + str.substring(i+1);
+        printPermutation(newStr, perm + currChar, idx+1);
+      }
+    }
+    public static void main(String[] args) {
+        String str = "ABC";
+        printPermutation(str, "", 0);
+    }
+}
+
+
+
+
+
+
+
+
+2)N-Queens
+
+N*N chessboard
+N Queens
+Print all solutions where queens are safe 

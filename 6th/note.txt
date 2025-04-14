@@ -1,0 +1,286 @@
+10.print the pattern  (Butterfly pattern)
+
+
+*      *   1 r     1 star          6space                 1 star
+**    **   2 r     2 star          4space                 2 star
+***  ***   3 r     3 star          2space                 3 star
+********   4 r     4 star          0space                 4 star
+********                     2*3   3 = (n-i)(4-1)
+***  ***                     2*2   2 = (n-i)(4-2)
+**    **                     2*1   1 = (n-i)(4-3)
+*      *                     2*0   0 = (n-i)(4-4)
+
+i = 1
+i = 2
+i = 3
+i = 4
+
+
+
+upper part
+
+for(int i=1 to n){
+    1st part star
+    for(int j=1 to i)         Here i going (1 to n)
+    space
+    spaces = 2*(n-i)
+    for(int j=1 to space)
+
+    2nd part star
+    for(int j=1 to i)
+}
+
+
+
+Lower part   [i will go  (n to 1)]
+ 
+ i = n = 4
+ spaces = 2*(n-i) = 2*(4-4) =  0
+ stars = 4 + 4
+
+ i = n = 3
+ spaces = 2*(n-i) = 2*(4-3) =  2
+ stars = 3 + 3
+
+
+
+ 
+
+    public static void main(String []args){
+        int n = 5;
+
+
+
+        // Upper half
+        for(int i=1;i<=n;i++){
+            //1st part
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //spaces
+            int spaces = 2*(n-i);
+            for(int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            //2nd part
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+
+
+
+
+        //Lower half
+        for(int i=n;i>=1;i--){
+            //1st part
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //spaces
+            int spaces = 2*(n-i);
+            for(int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            //2nd part
+            for(int j =1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+
+    }
+
+
+
+
+11.Print the pattern (Solid Rhombus)
+
+n = 5
+
+    *****   i = 1      4 spaces     5 stars  
+   *****    i = 2      3 spaces     5 stars  
+  *****     i = 3      2 spaces     5 stars 
+ *****      i = 4      1 spaces     5 stars  
+*****       i = 5      0 spaces     5 stars  
+                       n-i = 5-1 = 4
+                       n-i = 5-2 = 3
+                       n-i = 5-3 = 2
+                       n-i = 5-4 = 1
+                       n-i = 5-5 = 0
+
+
+ public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+             //spaces print
+            for (int j = 1; j <= (n - i); j++) {
+                System.out.print(" ");
+            }
+            //star print
+            for (int j = 1; j <= n; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+
+
+12.Print the pattern (Number Pyramid)
+n = 5
+
+      1          i = 1               1    1 time
+     2 2         i = 2               2    2 times
+    3 3 3        i = 3               3    3 times
+   4 4 4 4       i = 4               4    1 times
+  5 5 5 5 5      i = 5               5    1 times
+ 
+1 row   4spaces   1  1 time
+2 row   3spaces   2  2 times
+3 row   2spaces   3  3 times
+4 row   1spaces   4  4 times
+5 row   0spaces   5  5 times
+
+         (n-i) 5-1 = 4
+
+
+
+
+
+ public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+          //spaces
+          for(int j=1;j<=n-i;j++){
+            System.out.print(" ");
+          }
+          //numbers -->print row no, row no times
+          for(int j=1;j<=i;j++){
+            System.out.print(i+ " ");
+          }
+
+          System.out.println();
+        }
+    }
+
+
+
+
+
+
+
+13. Print the pattern (Palindromic Pattern)
+BOB revere BOB
+121 revere 121
+                                                                                     2nd hlf
+   n = 5;                     1st half                       number     |     
+                                                                        |
+             1               i = 1       spaces 4             1 to 1    |         no print
+           2 1 2             i = 2       spaces 3             2 to 1    |           2
+         3 2 1 2 3           i = 3       spaces 2             3 to 1    |          2 to 3
+       4 3 2 1 2 3 4         i = 4       spaces 1             4 to 1    |          2 to 4
+     5 4 3 2 1 2 3 4 5       i = 5       spaces 0             5 to 1    |          2 to 5
+                                           (n-i)         for(j=i to 1)          for(j=2 to i)
+                                                           Backward               forward
+
+   
+    public static void main(String[] args) {
+        int n = 5;
+
+        for (int i = 1; i <= n; i++) {
+
+         //spaces 
+         for(int j=1;j<=n-i;j++){
+            System.out.print(" ");
+         }
+         
+
+         //1st numbers (reverse loop)
+         for(int j=i;j>=1;j--){
+            System.out.print(j);
+         }
+
+         //2nd half number
+         for(int j=2;j<=i;j++){
+            System.out.print(j);
+         }
+
+
+         System.out.println();
+        }
+    }                     
+
+
+
+14.Print the pattern(Diamond pattern)
+
+n = 4;
+
+
+    *            i = 1      spaces 3         1 star
+   ***           i = 2      spaces 2         3 star
+  *****          i = 3      spaces 1         5 star
+ *******         i = 4      spaces 0         7 star
+ *******                    (n-i)           (2*i - 1)
+  *****
+   ***
+    *
+
+
+
+ public static void main(String[] args) {
+        int n = 5;
+
+        // Upper part
+        for (int i = 1; i <= n; i++) {
+
+            // spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // star
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+
+        
+
+        // Lower part
+        for (int i = n; i >= 1; i--) {
+
+            // spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // star
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+
+
+
+
+
+
+
+                                           
+
+

@@ -1,0 +1,10 @@
+==================== Stack Data Structure ================
+
+
+
+1)Push at the Bottom of the Stack
+
+2)Reverse a Stack
+
+
+

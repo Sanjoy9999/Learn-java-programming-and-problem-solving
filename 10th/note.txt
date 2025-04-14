@@ -1,0 +1,64 @@
+===============Introduction of Array=========================
+
+
+ARRAYS
+
+List of items of the same types 
+
+
+--> english = 95
+--> physics = 97
+--> chemistry = 98
+
+
+int age = 16;
+int english = 95
+
+
+
+Defining an array(1)
+
+type[] arrayName = new type[size];
+
+int[] marks = new int[3];
+
+0      1       2
+phy   chem    eng
+
+
+marks[0]; = 97;
+marks[1]; = 98;
+marks[2]; = 95;
+
+marks[0];
+
+What happens in memory?
+
+
+
+Defining an array(2)
+
+type[] arrayName = {1,2,3,4,5};
+
+
+If you defined variables .But You did not input data .
+The java by default store data
+
+null
+
+int --> 0
+float -->0.0
+boolean -->false;
+string -->" " 
+
+
+===================================================================
+
+
+Qs. Take an array as input from the user.Search for a given number x and print the index
+at which it occurs.
+
+
+(length) -->property
+
+number.length ==>size

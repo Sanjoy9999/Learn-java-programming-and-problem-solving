@@ -1,0 +1,77 @@
+1)Output
+2)Variables
+3)Data Types
+4)Input
+
+
+
+1)Output
+
+System.out.println("Hello World");
+
+System is a class.
+
+
+1)print
+
+System.out.print("kjdsfkha");
+
+
+
+2)println
+
+System.out.printin("kjdsfkha");
+-----next line--
+
+3)"\n"                A  \n  B
+
+
+
+
+
+Print the pattern
+*
+* *
+* * *
+* * * *
+
+
+
+
+
+
+Variables in Java
+
+a = 25, b = 10;
+
+
+               2 * (a+b)
+2 is a Constant     a,b are Variables
+
+
+
+
+Data Types
+
+
+                                      Data Types
+
+               primitive(64 bits)                          Non-primitive 
+
+           byte  -->1 byte (8 bits)                              String
+           short -->1 byte                                       Array
+           char  -->2 byte                                       class
+           boolean --> 1 byte                                    Object
+           int     -->4 byte                                     Interface
+           long    --> 8 byte
+           float   --> 4 byte
+           double  --> 8 byte 
+
+
+
+
+to calculate  :   a*b / a-b ;  a = 10,b=5
+
+int ans = a*b/a-b;
+
+int ans = (a+b)/(a-b);

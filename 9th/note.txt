@@ -1,0 +1,203 @@
+Time and Space Complexity
+
+
+      Time                  Space Complexity
+
+
+Time Complexity
+
+It is relation between Input Size & Running Time(Operations)
+
+
+
+main(){
+    print("Hello");  -->1
+}
+
+
+
+main(){
+    print("Hello");  -->1
+    print("Hello");  -->1
+}              total =  2
+
+
+
+Scanner --> Input a variables "n"
+
+
+for(int i = 0 to n){
+    print("Hello");
+}
+
+
+1)Time Complexity
+
+public static void main(String[]args){
+
+
+    Scanner sc =  new Scanner(System.in);
+    int n =  sc.nextInt();
+
+
+    for(int i=0;i<n;i++){                ----> n times
+        System.out.println("Hello");  
+    }
+
+}
+
+
+time Complexity is proportion to new
+
+
+2) Time Complexity
+
+a)Best Case
+b)Average Case
+c)Worst Case
+
+a)Best Case
+Number : 1,2,3,4,5
+search for 1;
+
+Omega(1)
+
+
+b)Average Case
+search for 1;
+2 1 3 4 5
+
+(1 + 2 + 2 + 4 + 5)/5
+n(n+1)/2
+
+Theta(n+1/2)
+
+
+c)Worst Case
+search for 1;
+5 4 3 2 1
+ we take n steps 5 steps
+
+O(n);
+
+
+
+3)Time Complexity
+
+
+public static void main(String[]args){
+
+
+    Scanner sc =  new Scanner(System.in);
+    int n =  sc.nextInt();
+
+
+    for(int i=0;i<n;i++){     
+        for(int j = 0 ; j <= n; j++){
+          System.out.println("Hello");    O(n^2)
+        }   
+    }
+
+}
+
+
+5)Time Complexity
+
+public static void main(String[]args){
+
+
+    Scanner sc =  new Scanner(System.in);
+    int n =  sc.nextInt();
+    int m =  sc.nextInt();
+
+
+    for(int i=0;i<n;i++){     
+        for(int j = 0 ; j <= m; j++){
+          System.out.println("Hello");    O(n*m)
+        }   
+    }
+
+}
+
+
+
+
+6)Time Complexity
+
+public static void main(String[]args){
+
+
+    Scanner sc =  new Scanner(System.in);
+    int n =  sc.nextInt();
+    int m =  sc.nextInt();
+
+
+    for(int i=0;i<n;i++){                     -->O(n)
+          
+          System.out.println("Hello");    
+    }
+
+     for(int j = 0 ; j <= m; j++){             -->O(m)
+          System.out.println("Hello");   
+        }
+
+}
+
+final time complexity    O(n+m);
+
+
+n = 10^6    m = 3;
+
+
+7) Time Complexity
+
+compare :  O(n)     O(n^2)    O(n^3)
+
+n = 1       1          1        1
+n = 2       2          4        8
+n = 3       3          9        27
+
+
+10^5       10^5       10^10     10^30
+
+
+
+==========================================================================================
+
+
+1)Space Complexity
+
+
+How many variables take
+
+1)Scanner object
+2)integer n
+3)variable i.
+
+
+
+public static void main(String[]args){
+
+
+    Scanner sc =  new Scanner(System.in);
+    int n =  sc.nextInt();
+
+
+    for(int i=0;i<n;i++){     
+          System.out.println("Hello");   
+        }   
+    }
+
+
+2)Space Complexity
+
+Array
+
+a b c d e f g h 
+
+
+
+
+
+
+

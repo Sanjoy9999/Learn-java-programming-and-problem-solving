@@ -1,0 +1,11 @@
+===================== Linked List ===================================
+
+
+1)Find & Delete the nth Node from the end of Linked List
+
+2)Check if a Linked List is a Palindrome
+
+3)Detect a Cycle in a Linked List + Trick to Remove the Cycle.
+
+
+

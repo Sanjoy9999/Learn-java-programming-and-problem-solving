@@ -1,0 +1,11 @@
+=================================== Hash Map =====================================
+
+HASHMAP == unorder
+
+
+Iteration in HASHMAP
+
+for(Map.Entry<Integer,Integer> e:Map.entrySet());
+          key      value 
+
+

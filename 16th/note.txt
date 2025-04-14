@@ -1,0 +1,254 @@
+============Sorting in Java=========================================
+
+1)Bubble sort
+2)Selection  sort
+3)Insertion sort
+
+
+==========================================================
+
+1)Bubble Sort 
+
+
+7 8 3 1 2
+
+total (n-1) means (5-1) 4 time loop
+
+Ascending order
+
+1 loop
+1) 7 8 
+   7 3 8
+   7 3 1 8
+   7 3 1 2 8
+
+
+
+
+
+2 loop
+start 
+7 3 1 2 8
+
+3 7 
+3 1 7
+3 1 2 7 8
+
+
+
+
+
+
+3 loop
+start 3 1 2 7 8
+
+1 3
+1 2 3
+1 2 3 7
+1 2 3 7 8
+
+
+
+4 th loop
+1 2 3 7 8
+
+
+final answer 
+ 1 2 3 7 8
+
+
+==========================================================================
+
+Selection Sort 
+
+
+7 8 3 1 2
+
+
+In Selection one swap in one iteration(loop)
+
+7 8 3 1 2
+
+assume 1st position value is smallest value 0th
+
+
+Here 7 is small value by assume
+
+1)smallest = 0
+
+
+1 loop(check smallest number from 7 number )
+ 7 8
+ no
+
+
+ 3 is  smallest 7
+
+ 7 8 3
+
+ now smallest position 2[3]
+
+3[1]
+
+
+1 8 3 7 2
+
+
+We already place smallest element in 0th position
+
+
+
+
+
+2 loop
+
+1 8 3 7 2
+
+
+now assume smallest element 1th position 
+
+
+smallest element =1[8]
+
+
+ 8 3
+ 
+smallest element =2[3]
+
+
+8 3 7 2
+
+smallest element =4[2]
+
+
+
+New array 
+
+1 2 3 7 8
+
+
+
+
+3 loop
+
+smallest 2[3]
+
+3 7 
+
+3 7 8
+
+
+
+4th loop
+smallest 3[7]
+
+
+5th loop
+
+already all element are sorted
+
+======================================================================
+
+3)Insertion Sort
+
+
+7 8 3 1 2
+
+
+Insertion sort has two part
+
+  sorted part              Unsorted part
+      7                      8 3 1 2
+
+
+Let assume first part sorted part
+
+1st loop
+
+  sorted part              Unsorted part
+      7            |         8 3 1 2
+
+compare 7 with 8 
+
+7 8  | 3 1 2
+
+
+
+2 loop
+7 8  | 3 1 2
+
+
+compare 8 with 3 
+
+7  _  8 
+
+
+
+compare 7 with 3 
+
+_  7  8 
+
+
+no compare with 3
+
+3  7  8  | 1 2
+
+
+
+
+
+
+
+3 loop
+
+3  7  8  | 1 2
+
+compare 8 with 1 
+
+3 7  _ 8
+
+compare 7 with 1 
+
+3 _  7  8
+
+compare 3 with 1 
+
+_ 3  7  8
+
+no compare with 1 
+
+1 3  7  8 | 2
+
+
+
+
+
+4 loop
+
+
+1 3  7  8 | 2
+
+
+compare 8 with 2
+
+1 3 7 _ 8
+
+
+
+compare 7 with 2
+
+1 3 _ 7 8
+
+
+compare 3 with 2
+
+1 _ 3 7 8
+
+
+
+
+compare 1 with 2
+
+1 _ 3 7 8
+
+1 2 3 7 8

@@ -1,0 +1,428 @@
+====================Recursion class 2=============================
+
+level -->only one work
+      -->upper level
+
+1)Tower of Hanoi
+
+
+public class Recursion2{
+
+
+    public static void towerOfHanoi(int n,String src,String helper,String dest){
+
+        if(n == 1){
+            System.out.println("Transfer disk "+ n +" from "+src+" to "+ dest);
+            return;
+        }
+        towerOfHanoi(n-1, src,dest, helper);
+        System.out.println("Transfer disk "+ n +" from "+src+" to "+ dest);
+        towerOfHanoi(n-1, helper, src, dest);
+    }
+
+    public static void main(String[] args) {
+        int n = 3;
+        towerOfHanoi(n, "S","H","D");
+    }
+}
+
+
+
+2)Print a String in reverse
+"abcd" -->  "dcba"
+
+
+by loop (iteration) 
+
+last index = str.length - 1;
+
+
+public class Recursion2{
+
+    public static void printRev(String str,int idx){
+
+        if(idx == 0){
+            System.out.print(str.charAt(idx));
+            return;
+        }
+        System.out.print(str.charAt(idx));
+        printRev(str, idx-1);
+    }
+
+
+    public static void main(String[] args) {
+        String str = "abcd";
+       printRev(str,str.length()-1);
+    }
+}
+
+
+3)Find the 1st & last occurance of an element in String
+
+
+element = a;
+
+"abaacdaefaah"
+ 0         10
+
+
+first = 0; -1
+last = 0; -1
+
+if(currentChar == element)
+
+first == -1 ==> first = index
+
+else  ==> last ==>index
+
+
+public class Recursion2{
+
+  public static int first = -1;
+  public static int last = -1;
+
+  public static void findOccurance(String str, int idx,char element){
+    if(idx == str.length()){ //time complexity O(n);
+        System.out.println(first);
+        System.out.println(last);
+        return;
+    }
+
+    char currChar = str.charAt(idx);
+    if(currChar == element){
+        if(first == -1){
+            first = idx;
+        }else{
+            last = idx;
+        }
+    }
+
+    findOccurance(str, idx+1, element);
+
+  }
+
+
+    public static void main(String[] args) {
+      String str =  "abaacdaefaah";
+      findOccurance(str, 0, 'a');
+    }
+}
+
+
+4)Check if an array is sorted (Strictly Increasing)
+
+{1,2,3,4,5}
+
+1 2 3 4 5  true 
+
+
+false
+1 2 3 4 4
+4 3 2 1
+
+
+
+idx = 0 <(idex + 1)
+
+
+
+public class Recursion2 {
+
+  public static boolean isSorted(int arr[], int idx) {
+
+    if (idx == arr.length - 1) {//time complexity O(n)
+      return true;
+    }
+
+    if (arr[idx] >= arr[idx + 1]) {
+      // array is unsorted
+      return false;
+    } else {
+      return isSorted(arr, idx + 1);
+    }
+
+  }
+
+  public static void main(String[] args) {
+    int arr[] = { 1, 3, 3 };
+    System.out.println(isSorted(arr, 0));
+  }
+} 
+
+
+
+5)Move all "x"  to the end of the String
+
+"axbcxxd" --->"abcdxxx"
+
+
+
+idx  --> currentChar 
+count -->track no of x. 0 ->1 ->2 ->3 
+
+
+newString ---> " " a  ab abcd(for count for x)
+
+
+
+public class Recursion2 {
+
+  public static void moveAllx(String str, int idx, int count, String newString) {
+
+    if (idx == str.length()) {//time complexity O(n);
+      for (int i = 0; i <= count; i++) {// count           3
+        newString += 'x';                //total = O(n + count) = bcz count is very small O(n) time complexity
+      } 
+      System.out.println(newString);
+      return;
+    }
+
+
+
+    char currChar = str.charAt(idx);
+    if (currChar == 'x') {
+      count++;
+      moveAllx(str, idx + 1, count, newString);
+    } else {
+      newString += currChar;// newString = newString + currChar;
+      moveAllx(str, idx + 1, count, newString); 
+    }
+  }
+
+  public static void main(String[] args) {
+    String str = "axbcxxd";
+    moveAllx(str, 0, 0, "");
+  }
+}
+
+
+6) Remove duplicates in a String
+
+"abbccda"  ==> "abcd"
+
+create map of character  
+
+a b c d e f........z
+0 1 2 3 4 5       25
+
+'a' - 'a' = 0
+'b' - 'a' = 1
+'c' - 'a' = 2
+
+
+'z' - 'a' = 25;
+
+
+store f by default 
+f f f f f.........f 
+
+
+
+currChar  ---->True 
+              not add newString
+
+currChar  ---->false 
+              add newString
+             map[pos] = true
+
+public class Recursion2 {
+
+  public static boolean[] map = new boolean[26];
+
+  public static void removeDuplicate(String str, int idx, String newString) {
+
+    if (idx == str.length()) { //O(n)
+      System.out.println(newString);
+      return;
+    }
+
+    char currChar = str.charAt(idx);
+    if (map[currChar - 'a']) {
+      removeDuplicate(str, idx + 1, newString);
+    } else {
+      newString += currChar;
+      map[currChar - 'a'] = true;
+      removeDuplicate(str, idx + 1, newString);
+    }
+  }
+
+  public static void main(String[] args) {
+    String str = "abbccda";
+    removeDuplicate(str, 0, "");
+  }
+}
+
+
+7)Print all the subsequences of a String(************)
+
+"abc"
+
+subsequences
+abc
+ab
+ac 
+a 
+bc 
+b 
+_
+
+
+
+newString == " "
+
+idx = 0;
+
+choose       call 1      newString + callChar
+not choose    call 1      newString
+
+
+
+time complexity
+
+"abc"
+
+subsequences = 2^n = 2^3 = 8
+
+
+public class Recursion2 {
+public static void subSequences(String str,int idx,String newString){
+
+
+  if(idx == str.length()){  
+    System.out.println(newString);
+    return;
+  }
+
+
+  char currChar = str.charAt(idx);
+  //to be 
+  subSequences(str, idx+1, newString+currChar);// time complexity   2^n 
+
+  //or not to be
+  subSequences(str, idx+1, newString);
+}
+
+  public static void main(String[] args) {
+    String str = "abc";
+  subSequences(str, 0, "");
+  }
+}
+
+
+
+
+7)Print all the unique  subsequences of a String(************)
+
+"aaa"
+
+subsequences
+aaa
+aa
+aa 
+aa 
+a 
+a 
+a
+_
+
+Hashset data structure 
+
+It can help store unique data store
+
+import java.util.HashSet;
+
+public class Recursion2 {
+public static void subSequences(String str,int idx,String newString,HashSet<String> set){
+
+  if(idx == str.length()){  
+    if(set.contains(newString)){
+      return;
+    }else{
+      System.out.println(newString);
+      set.add(newString);
+      return;
+    }
+  }
+
+
+  char currChar = str.charAt(idx);
+  //to be 
+  subSequences(str, idx+1, newString+currChar,set);// time complexity   2^n 
+
+  //or not to be
+  subSequences(str, idx+1, newString,set);
+}
+
+  public static void main(String[] args) {
+    String str = "aaa";
+    HashSet<String> set = new HashSet<>();
+    subSequences(str, 0, "", set);
+  }
+}
+
+
+
+
+
+
+
+
+8)Print keypad combination
+
+
+0 -> .
+1 -> abc
+2 -> def
+3 -> ghi
+4 -> jkl
+5 -> mno
+6 -> pqrs
+7 -> tu
+8 -> vwx
+9 -> yz
+
+
+
+"23"  --->def -->ghi 
+
+
+
+             dg
+d            dh
+             di 
+
+             eg
+e            eh
+             ei
+
+             fg
+d            fh
+             fi 
+
+
+
+import java.util.HashSet;
+
+public class Recursion2 {
+  public static String[] keypad = {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
+
+  public static void printComb(String str,int idx,String combination){
+
+    if(idx == str.length()){
+      System.out.println(combination); //time complexity 2^n 
+      return;
+    }
+
+    char currChar = str.charAt(idx);
+    String mapping = keypad[currChar -'0'];
+    
+    for(int i=0;i<mapping.length();i++){
+      printComb(str, idx+1, combination+mapping.charAt(i));
+    }
+  }
+  public static void main(String[] args) {
+    String str = "4";
+    printComb(str, 0, "");
+  }
+} 
+

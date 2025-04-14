@@ -1,0 +1,55 @@
+=============== Queue Data Structure ====================================
+
+
+
+QUEUE (Train ticket counter front side  line)
+
+
+front               rear
+  1  2  3  4  5  6  7
+
+
+FIFO (First IN First Out)  
+
+
+
+Operations 
+
+Enqueue  Add ---> adding
+
+Dequeue   Remove 
+
+Front     Peek 
+
+
+Implementation 1
+
+Queue using Array 
+
+add O(1)
+
+peek  O(n)
+remove - O(n)
+
+
+
+Implementation 2
+
+Circular Queue using Array 
+
+add - O(1)
+peek - O(1)
+remove - O(1)
+
+
+
+
+
+Question 
+
+Queue using 2 Stacks 
+
+
+
+1)Push -O(n)
+1)Pop  -O(n)

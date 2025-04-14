@@ -1,0 +1,93 @@
+Conditional Statements
+
+if,else
+
+else if
+
+switch
+
+break;
+
+
+================================================================
+
+str 1;
+str 2;
+
+if(Condition){
+str 3;
+str 4;
+}
+else{
+str 5;
+str 6;
+}
+
+str 7;
+str 8;
+
+
+1)Take value from user
+
+check age of user by Condition
+
+then print string according to user input
+
+
+2)user --> number
+
+number check odd and even
+
+{%}--this modulo operator
+
+x % y --> remainder
+
+x/2 -->get number odd
+x/2 -->get no number even
+
+
+
+3)take two number from user a,b 
+
+a=b   --> equal
+a>b --> a is greater
+a<b --> b is greater
+
+
+
+else if
+
+if(Condition){
+str 3;
+str 4;
+}
+else if{
+str 5;
+str 6;
+}-
+else{
+
+str 7;
+str 8;
+}
+
+
+
+switch case
+Q. Print the Greeting
+
+1: Hello
+2:Namaste
+3:Bonjour
+
+
+
+switch(variable){
+    case 1: str 1;
+            break;
+    case 2: str 2;
+            break;
+    case 3: str 3;
+            break;
+    default: str 4;
+}

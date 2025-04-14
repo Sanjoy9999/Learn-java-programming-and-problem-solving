@@ -1,0 +1,25 @@
+===================== HashMap Implementation ==========================
+
+
+Implementation HashMap
+
+O(1)
+
+put() -- add data
+get() -- get data or retrive
+containsKey() -- it is check  data exist in HashMap or not.
+remove() -- delete key value data  from HashMap
+size() -- find total HashMap pair present in HashMap
+keySet() -- get all keySet of HashMap
+
+
+
+***Array of LinkedList way data store in  HashMap 
+
+Implementation HashMap
+
+in put -- array O(lambda) --best case 
+                O(n)      --worst case 
+
+
+

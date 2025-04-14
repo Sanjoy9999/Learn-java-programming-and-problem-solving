@@ -1,0 +1,80 @@
+Loops
+
+
+1)For Loops
+2)while Loops
+3)do while Loop
+
+
+
+Syntax:-
+
+for(initialization;condition;updation){
+    //do something
+}
+
+ int counter = 0;  counter < 100 ;   counter = counter + 1;
+
+condition counter < 100;(terminating condition)
+
+
+
+while(condition){
+    //do something
+}
+
+i<11
+int i  = 0;
+while(i<11){
+    print(i)
+}
+
+
+
+
+at least
+do{
+    //do something
+}while(condition);
+
+int i = 0;
+
+do{
+    print(i);
+}while(i<11);
+
+
+Q. Print the sum of first n natural numbers;
+
+
+n = 4;
+1  + 2 + 3 + 4 = 10;
+
+int sum = 0;
+for(int i = 1;i <= n;i++){
+ sum = sum + i;
+}
+
+print("Sum");
+
+
+
+
+Q.Print the table of a number input by the user.
+
+n = 2
+
+2*1 
+2*2 
+2*3 
+2*4 
+2*5 
+2*6 
+2*7 
+2*8 
+2*9
+2*10
+
+for(int i = 0;i<11;i++){
+    print(n*i);
+}

@@ -1,0 +1,199 @@
+============================ Trie Data Structure =============================================
+
+
+Trie data Structure
+
+Prefix data Structure
+
+Digital search tree
+
+Retrieval tree 
+
+
+
+
+1)Word Break Problem
+
+Given an input string and a dictionary of words,find out if the input string can be broken into
+a space-separated sequence of dictionary words.
+
+
+words[] = {i,like,sam,samsung,mobile,ice}
+key = "ilikesamsung"
+
+output: true
+
+
+
+
+2)startsWith Problem
+
+Create a function boolean startsWith(String Prefix) for a trie.
+Returns true if there is a previously inserted string word that has the prefix ,and 
+false otherwise.
+
+words[] = {"apple","app","mango","man","woman"}
+
+
+prefix = "app"  output : true
+
+prefix = "moon" output : false  
+
+
+
+Approach 
+
+Trie search
+
+prefix = "app"
+
+prefix = "moon" 
+
+
+
+
+
+
+
+3)Count Unique Substrings 
+
+Given a string of length n of lowercase alphabet characters,we need to count total number
+of distinct(Unique) substring of this string.
+
+str = "ababa"
+a  ab  aba abab   ababa 
+b  ba  bab baba   " "
+a  ab  aba 
+b  ba  
+a 
+
+remove same string 
+
+ans = 10;
+
+prefix and suffix 
+
+
+prefix 
+
+"apple"
+a 
+ap 
+app 
+apple 
+
+
+
+suffix 
+
+"apple"
+e 
+le  
+ple 
+pple 
+apple
+
+
+
+all prefix of all suffix
+all suffix of all prefix
+
+
+
+
+all prefix of all suffix
+
+str = "ababa"
+ans = 10
+
+suffix
+
+ababa -> a,ab,aba,abab,ababa 
+baba  ->b,ba,bab,baba
+aba   ->a,ab,aba 
+ba    -> b ba 
+a     -> a 
+" "   -> " "
+
+
+
+1) find all suffix of string 
+
+2)create a trie from suffix 
+
+3)count nodes of trie 
+
+total nodes of trie = count of Unique prefix 
+
+" "     "ababa" 
+"a"       "b"
+"ab"      "ba"
+"aba"     "bab"
+"abab"    "baba"
+
+
+count Node (root) 
+
+step 1: for code 
+for(int i=0 to n)
+   substring(i) ->suffix 
+
+step 2: insert(suffix) 
+
+step 3:count = 0 ;
+for(int i = 0 to 26){
+  if(root.children[i]!== null )
+      count nodes(root.children[i]);
+}
+
+return count + 1;
+  BT 
+
+  count(root)
+
+  count(root.left);+
+  count(root.right) + 1;
+
+
+
+
+
+
+4)Longest World with all Prefixes 
+
+Find the Longest string in words such that every prefixes of it is also in words.
+
+words[] = {"a","banana","app","appi","ap","apply","apple"}
+
+ans = "apple" 
+
+
+"apple"
+a
+ap 
+app 
+appl 
+apple  
+
+
+apple   apply 
+
+lexicographic means ascending order 
+
+So here answer will be apple 
+
+
+case 1: longest length
+
+case 2:equal length 
+   |
+
+lexicographic smaller 
+
+case 3: not exist answer so print will be " " 
+
+
+
+Trie :- all unique prefix .
+
+

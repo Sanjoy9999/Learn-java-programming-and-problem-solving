@@ -1,0 +1,169 @@
+============================OOPS==============================
+
+
+
+OOPS ==> Object Oriented Programming System
+
+
+
+                  Class & Object
+
+
+Example 1:- Maruti 800
+
+
+Class is BluePrint of car.
+
+Object is all car those are out from factory.
+
+
+Example 2:-Pen
+
+
+class is Pen
+
+color,brand .These are object 
+
+red
+blue 
+black
+
+
+
+
+
+Constructor
+
+It will be same name of class name .
+Constructor does not any return.(It help only construct object).
+For one object you can call only one time.
+
+
+1)Non parameterized Constructor
+2)parameterized Constructor
+
+
+In java Destructor() method by default write
+and also in java garbage collection handle.
+
+
+
+1)Polymorphism Poly = many  + morphism = forms
+
+a)method overloading(Complile  Polymorphism)
+a)method overridding(Runtime Polymorphism)--Inheritance
+
+2)Inheritance
+
+a)Single Level Inheritance
+b)Multilevel Level Inheritance
+c)Hierarchical Inheritance
+d)Hybrid Inheritance
+
+e)Multiple Inheritance
+It is happen in interface not inheritance 
+But it is happen in c++  
+
+
+Package:-
+It is store related items in a Package.
+
+a)Buildten packages
+b)User-Build packages
+import java.util.*;
+
+
+Access Modifier
+1)public
+(method(),characteristic,function,parameter )
+
+always main class public .
+Because It will be accessible for code execution
+
+
+
+2)private
+It can only access into own class.
+It cannot be access outside of class.
+
+
+so how to access data from private 
+There are two type of function getter() & setter() 
+
+
+
+3)protected
+In protected can access all things in own package
+But it can also access only other package sub class data.Not other things
+
+4)default 
+In default can access all things in own package
+but it cannot be access any things from other package
+
+
+
+
+3)Encapsulation
+(Data + function()) combined a single entity
+Data means == class property
+function() == in function has method();
+
+It is help to data hiding by Encapsulation
+
+
+
+
+4)Abstraction
+
+It is help only show important things but do not show not important things.
+
+
+By two way we can write Abstraction concepts 
+i)abstract keyword
+
+1)An abstract class must be declared with an abstract keyword
+2)It can have abstract and non abstract methods.
+3)It cannot be instantiated
+4)It can have constructors and static methods also.
+
+constructor chaining 
+When after creating a object in main function then
+when you call a class function this time first call base class then sub class 
+
+
+
+ii)interface (in interface happen pure Abstraction)
+
+1)All the fields in interface are public,static and final by default
+2)All methods are public & abstract by default 
+3)a class that implements an interface must implement all the methods declared in the interface.
+4)Interfaces support the functionality of Multiple Inheritance.
+
+
+5)It can have final methods which will force the subclass not to change the body
+class the method.
+
+
+
+
+Static keyword
+
+Special keyword
+
+4 ways we can use this Special keyword
+
+a)property
+b)function
+c)Block 
+d)Nested class 
+
+
+
+1)It is accessible for all but not like public keyword
+2)It common for all class 
+
+3)Similarly some function will be static
+
+*** Static keyword take  space only one time in memory.
+In object time take space again again time memory.
+

@@ -1,0 +1,44 @@
+
+
+1)HOW TO REVERSE A LINKED LIST
+
+(No extra memory)
+
+space complexity O(1);
+time - O(n);
+
+ head
+  1 --> 1 --> 2 -->3 --> 4 -->null
+
+
+
+Three variables
+1)prev node
+2)curr node
+3)next node
+
+
+
+   4 --> 5 --> 6
+   prev  curr  next 
+
+
+   curr.next = prev
+
+      4 --> 5 --> 6
+
+      4 --> 5     6 
+                 next 
+        
+
+5       6    7  
+prev  curr  next 
+
+curr.next = prev
+
+4 <-- 5 <-- 6    7
+
+
+
+
+

@@ -1,0 +1,253 @@
+=================Bit Manipulation=================================
+
+
+
+When go to current in circuit .It is mean 1
+When do not go to current in circuit .It is mean 0
+
+
+
+---------------------------------------------------------------
+
+
+Quick Revision
+
+
+Left shift                          Right shift
+
+N<<i                                  N>>i
+2<<1                                  2>>1
+010 <<1                               010 >>1
+100                                    001
+
+
+=============================================================================================
+0 1 0 0 1 0 0 0
+
+1)Get Bit  It is help to know bit identification.Does it 0 or 1
+1)Set Bit  It is help to set bit. If any particular bit change from 0 to 1 and it keep bit from 1 to 1.
+1)Clear Bit It is help to clear bit .Means if any particular bit you want to do 0 .So it do it.
+1)Update Bit  It is help to update  bit .Means if any particular bit you want to do from 0 to 1 and from 1 to 0.So it do it.
+
+
+
+1)Get Bit
+
+Get  the 3rd bit(position = 2)of a number n.(n = 0101)
+
+i means position
+
+1)Bit Mark: 1<<i
+
+2)Operation: AND  
+
+      0      1      0      1
+     4th    3th   2nd     1st
+
+
+1) 1<<2
+   0001 << 2
+   0100 --bit mask
+
+2)Operation AND
+ 
+ 0100
+ 0101  means number of binary number
+
+ 0100 This is final number   
+
+ n=0101
+position 2  value was 1.
+
+ if this final number is non zero.It means was non zero
+ if this final number is zero.It  means was zero
+
+
+
+position = 3
+
+
+n=0101
+
+
+1)Bit mask
+ 1<<3
+
+0001 <<3
+1000
+
+
+
+2)And Operation
+
+1000
+0101
+
+0000  final answer    if this final number is zero.It  means was zero
+
+
+n=0101
+position 3  value was 0.
+
+
+public class Bits{
+    public static void main(String []args){
+        int n = 5;
+        int pos = 3;
+        int bitMask = 1<<pos;
+
+
+        if((bitMask & n) == 0){
+             System.out.println("Bit was zero");
+        }else{
+            System.out.println("Bit was one");
+        }
+    }
+}
+
+=============================================================================================
+
+2)Set Bit
+
+set the 2nd bit (Position = 1)  of a number n. ( n = 0101)
+
+n = 0101 means decimal 5 to covert 7(0111)
+
+Bit Mask :1<<i
+Operation:OR 
+
+
+1)Bit mask 
+
+1<<i 
+0001
+
+0001<<1
+0010
+
+2)OR Operation
+
+0010
+0101
+
+0111 final answer
+
+
+
+Bit mask OR Operation  in n number
+always come 1
+
+
+public class Bits{
+    public static void main(String []args){
+        int n = 5;//0101
+        int pos = 1;
+        int bitMask = 1<<pos;
+
+
+       int newNumber = bitMask | n;
+       System.out.println(newNumber);
+    }
+}
+
+
+========================================================================================
+
+clear Bit
+
+Clear the 3rd bit (Position = 2) of a number n.(n = 0101)
+
+
+0101 = (5)10   to convert 0001 = (1)10
+Bit Mask: 1<<i
+Operation: AND with NOT 
+
+
+1)Bit Mask
+
+1<<i
+0001<<2
+0100 final answer
+
+
+2)AND with NOT Bit 
+
+first find out NOT 
+~(0100) 
+1011
+
+now AND Operation
+
+1011
+0101
+
+0001 ==(1)10
+
+
+
+public class Bits{
+    public static void main(String []args){
+        int n = 5;//0101
+        int pos = 2;
+        int bitMask = 1<<pos;
+        int notBitMask = ~(bitMask);
+
+
+      int newNumber = notBitMask & n;
+      System.out.println(newNumber);
+    }
+}
+
+============================================================================
+
+Update Bit
+
+Update the 2nd bit (Position 1) of a number n to 1,(n = 0101)
+
+for 1 covert 0(Clear operation)    for 0 convert 1(Set Operation)
+Bit Mask:1<<i                         Bit Mask: 1<<i 
+Operation: AND with NOT               Operation: OR
+
+
+ for 0 convert 1(Set Operation)
+
+ 1)Bit mask 
+
+ 1<<1
+ 0001<<1
+ 0010
+
+ 2)Operation:OR 
+
+ 0010 
+ 0101
+
+ 0111 final answer
+
+2nd bit means 1 position now from 0 to 1
+
+
+
+
+ for 1 convert 0(Clear Operation)
+
+position 2  means 3 bits
+ 1)Bit mask 
+
+ 1<<2
+ 0001<<2
+ 0100
+
+ 2)Operation:AND with NOT
+
+ first do not operation of Bit mask
+
+ ~(0100)   ==> 1011 
+
+ 1011
+ 0101
+
+ 0001 final answer
+
+3rd bit means 2 position now from 1 to 0
+

@@ -1,0 +1,191 @@
+Operators
+
+Symbols that tell compiler to perform some operation
+
+
+     1            +                  2
+Operand       Operator           Operand  
+
+
+Binary Operator                         Unary Operator
++ --> A+B                                   ++  -->Increment  ++a/a++
+- --> A-B                                   --  --->Decrement --a/a--
+* --> A*B                          
+/ --> A/B
+% --> A%B  find remainder
+
+
+Pre-Increment                        Post-Increment
+ ++a                                     a++
+
+ int a = 10;                           int a = 10;
+ int b = 0;                            int b = 0;
+
+
+ b = ++a;                               b = a++;
+ System.out.println(a);//11            System.out.println(a);//11
+ System.out.println(b);//11           System.out.println(b);//10
+
+b = a++;
+first assign b = a 
+             b = 10
+
+             then a = 11
+             now a  print 11
+
+
+
+Pre-Decrement                        Post-Decrement
+ --a                                     a--
+
+ int a = 10;                           int a = 10;
+ int b = 0;                            int b = 0;
+
+
+ b = --a;                               b = a--;
+ System.out.println(a);//9            System.out.println(a);//9
+ System.out.println(b);//9           System.out.println(b);//10
+
+
+Relation Operators  ( A = 10, b = 5)(We get boolean value true/false)
+==       
+!=
+>
+<
+>=
+<=
+
+
+
+Logical Operators
+
+&& (Logical Operator)
+||(Logical OR)
+! (Logical Not)
+
+
+a = 10; b = 20 , c = 30
+(a<b && b<c)
+ true  true  == true
+
+
+ (a<b || c<a)
+ true    false  == true
+
+ if(a<b) == true
+ if(!a<b) == false
+
+
+ =========================================================================
+ Binary Number System Base 2                               
+
+Decimal Number --- 0 1 2 3 4 5 6 7 8 9 = Total 10 Numbers
+
+
+ 4 to Binary                                              101 to Decimal
+
+
+
+ 2^10  2^9   2^8  2^7  2^6  2^5  2^5  2^4  2^3   2^2  2^1  2^0
+
+2048   1024  512  256  128  64   32   16    8    4     2    1
+
+
+
+ 4 to Binary
+   
+   2 | 4 --0       4 to  100 Binary
+   2 | 2 --0
+     | 1 
+
+
+     (1 * 2^2) + (0 * 2^1) + (0*2^0)  = 4
+
+
+     (101)2 = (5)10
+
+     (1 * 2^2) + (0 * 2^1) + (1*2^0)  = 4 + 0 + 1 = 5
+
+
+
+Decimal to Binary digit 
+
+0 -> 000
+1 -> 001
+2 -> 010
+3 -> 011
+4 -> 100
+5 -> 101
+6 -> 110
+7 -> 111
+8 -> 1000
+9 -> 1001
+10 ->1010
+
+
+Others Numbers Systems
+
+Octal Base 8
+Hexadecimal Base 16 (Data store in memory this Numbers base)
+
+============================================================================
+
+
+Bitwise Operators 
+
+Operators 
+
+A = 0101, B = 0110
+
+& (Binary AND) 0 and 1 = 0 ; 1 and 0 = 0  only 1 or 1 = 1
+| (Binary OR)  0 or 1 = 1 ; 1 or 0 = 1  only 1 or 1 = 1
+^ (Binary XOR) 0 xor 1 = 1 ; 1 xor 0 = 1  only 1 xor 1 = 0 (When both are similar this time give false otherwise true)
+~ (Binary One's Complement)  1->0  , 0->1
+
+
+<< (Binary Left Shift)
+number Operator  position
+A<<1
+0101
+<---
+
+   _  _  0 1 0 1 _  _
+   _  _  1 0 1 0 _
+
+
+
+   0 1 1 0 << 1
+   1 1 0 0 
+
+1 1 0 0 1 1 0 0
+
+
+>> (Binary Right Shift)
+
+
+A>>1 --> 0101
+         0010
+
+B--> 0110
+     0011
+
+
+====================================================================================
+
+Assignment Operators
+
+A = 10 ,  B = 5
+
+=
++=
+-+
+-=
+*=
+/=
+%=
+
+a = a*b   -->a *= b
+a = a+b   -->a += b
+a = a-b   -->a -= b
+a = a/b   -->a /= b
+a = a%b   -->a %= b

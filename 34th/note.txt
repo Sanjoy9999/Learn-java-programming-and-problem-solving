@@ -1,0 +1,43 @@
+============================ Hashset in Java ==============================
+
+
+Implementation 
+HashSet
+HashMap
+
+what is hashing
+
+
+
+
+
+
+HASHSET  === Math
+
+
+Google Interview Preparation Guide
+
+Frequently asked topics (In no of particular order)
+
+1)Binary search
+2)BFS/DFS/FLOOD ...
+3)TREE TRAVERSALS
+4)HASH TABLES
+5)LINKED LIST,STACKS,QUEUES,TWO POINTERS/SLIDING WINDOWS
+6)BINARY HEAPS
+7)DYNAMICS PROGRAMMING
+8)UNION FIND
+9)AD HOOSTRING MANIPULATE
+10)OTHER GOOD TO KNOW TOPICS:-TRIE, SEGMENTS TREE LEFTWICK TREE ,BT MASK
+
+
+
+
+HashSet in Java
+
+Insert/Add - O(1)
+search/Contains - O(1)
+Delete/Remove - O(1)
+
+
+

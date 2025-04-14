@@ -1,0 +1,46 @@
+========================= Binary Search Tree ===============================
+
+
+
+What is a BST?
+
+Binary Tree 
+
+
+1)Left Subtree Nodes < Root
+1)Right Subtree Nodes > Root
+1)Left & Right Subtrees are also BST with no duplicates
+
+
+
+Strategy:-
+
+Most problems will be solved using recursion i.e by 
+dividing into sub problems & making recursive calls 
+on subtrees. 
+
+
+values[] = { 5,1,3,4,2,7};
+
+
+Build BST 
+
+
+Binary Search Tree  Search key values
+
+
+Delete a node 
+cases
+1)No child(Leaf Node)
+2)One child
+3)Two Children 
+
+
+Print in Range 
+
+x = 6 & y = 10
+
+
+Root to leaf Paths
+
+

@@ -1,0 +1,42 @@
+======================= Array List In java ================================
+
+
+
+Array List in java 
+
+
+Collection framework 
+1)Array list 
+
+
+array        0 | 1 | 2 | 3 | 4 | 5 |
+
+1)memory data store continuous 
+2)fixed size
+
+
+
+array list 
+1)al size variables 
+
+0 --> 1 --> 2 -->3
+
+
+array 
+We store primitive data types (int float) and Object
+
+array list
+we store object 
+
+
+Two types of data store in memory
+
+stack and heap
+
+ArrayList store heap 
+
+1)Addition
+2)Get 
+3)Modified 
+4)Delete/Remove 
+5)Iterate/other operation 

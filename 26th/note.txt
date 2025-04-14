@@ -1,0 +1,92 @@
+=================== Java Collection Framework ================================
+
+
+Collection Framework is some class and some interface combination 
+
+
+                    
+
+                    Iterable
+
+                    Collection
+
+     List             Queue             Set 
+
+
+
+Method on Collection
+
+
+add() -- add data 
+
+size() -- find array collection data structure 
+
+remove() -- remove data 
+
+iterate() -- means loop 
+
+addAll() -- multiple data add 
+
+removeAll() -- multiple data remove
+
+clear() -- data completely clear from data structure.
+
+
+list.remove(4);
+
+
+
+1)
+                        List Interface 
+
+                            List
+
+    ArrayList           LinkedList        Vector 
+
+                                          Stack 
+
+
+
+
+
+
+
+ 2)                   Queue Interface (FIFO)
+
+                         Queue
+
+   PriorityQueue       LinkedList        Deque (Double Ended Queue)
+
+                                        ArrayDeque  
+
+
+
+ 3)                    Set Interface 
+
+                         Set 
+
+       HashSet       LinkedHashSet        SortedSet
+
+                                          TreeSet 
+
+
+
+4)Map ( means key:value )
+                        Map Interface 
+
+                         Map 
+
+       HashMap       LinkedHashMap        SortedMap     Hashtable 
+
+                                           TreeMap
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+=========Advances Recursion Level Questions===========
+
+Google and Adobe company asked these types of Questions
+
+
+
+1)Print all permutations od a string
+
+Means ==> All possible combination of letters
+
+
+        "abc"
+
+abc  acb  bac  bca  cab  cba
+
+
+Real life example (Three student sitting arrangement)
+
+a  b  c 
+a  c  b 
+b  a  c 
+b  c  a 
+c  a  b 
+c  b  a 
+ 
+
+3
+  p      ==> 3! = 6
+    3
+
+
+"abcd" = 4! = 24
+
+
+
+"abc"
+
+              a                b                c 
+           b    c            a    c           a    b
+        c         b         c       a        b       a 
+
+          abc                  bac             cab
+          acb                  bca             cba 
+
+
+
+
+a      b
+
+bc     ac 
+
+
+public class Recursion3{
+
+    public static void printPerm(String str,String permutation){
+        if(str.length() == 0){
+            System.out.println(permutation);
+            return;
+        }
+
+        for(int i = 0;i<str.length();i++){
+            char currChar = str.charAt(i);
+            //abc ==>bc or ac or ab
+            String newStr = str.substring(0,i) + str.substring(i+1);
+            printPerm(newStr, permutation+currChar);
+        }
+    }
+
+    public static void main(String []args){
+     String str = "abc";
+     printPerm(str, "");
+    }
+}
+
+time complexity
+
+O(n!)  
+
+===============================================================================================
+
+2)Count total paths in a maze to move from (0,0)  to (n,m)
+
+
+n = 3,m = 3;
+
+    
+n * m  = 3 8 3
+
+public class Recursion3 {
+
+    public static int countPaths(int i, int j, int n, int m) {
+        if (i == n || j == m) {
+            return 0;
+        }
+        if (i == n - 1 && j == m - 1) {
+            return 1;
+        }
+
+        // move downwards
+        int downPaths = countPaths(i + 1, j, n, m);
+
+        // move right
+        int rightPaths = countPaths(i, j + 1, n, m);
+
+        return downPaths + rightPaths;
+    }
+
+    public static void main(String[] args) {
+        int n = 3, m = 3;
+        int totalPaths = countPaths(0, 0, n, m);
+        System.out.println(totalPaths);
+    }
+}
+
+===============================================================================
+
+3)Places Tiles of size 1xm in a floor of size nxm
+
+ n = 4, m =  2;
+
+
+ public class Recursion3 {
+
+ public static int placeTiles(int n,int m){
+    if(n == m){
+        return 2;
+    }
+
+    if(n < m){
+        return 1;
+    }
+
+
+    //vertically
+    int verPlacements = placeTiles(n-m, m);
+
+    //Horizontally
+    int harPlacements = placeTiles(n-1, m);
+
+    return verPlacements + harPlacements;
+ }
+    public static void main(String[] args) {
+        int n = 4, m = 2;
+        System.out.println(placeTiles(n, m));
+    }
+}
+
+
+================================================================
+
+
+4)Find the number of ways in which you can invite n people to your party,
+single or in pairs.
+
+n = 4;
+
+1  2  3  4
+
+
+n = 1; ==> 1
+
+`
+n = 2 ==>(1,2),
+      ==>(1or 2 pair) 2 ways 
+
+
+n = 3 ==>(1,2,3),
+      ==>(1or 2 pair) 3  
+      ==>(1or 3 pair) 2  
+      ==>(2or 3 pair) 1  
+
+              guest call(n)
+       single            pair
+     call(n-1)     +      (n-1)*call(n-2)  
+
+
+     public class Recursion3 {
+
+    public static int callGuests(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+
+        // single call
+        int ways1 = callGuests(n - 1);
+
+        // pair call
+        int ways2 = (n - 1) * callGuests(n - 2);
+
+        return ways1 + ways2;
+    }
+
+    public static void main(String[] args) {
+        int n = 4;
+        System.out.println(callGuests(n));
+    }
+}
+
+============================================================================
+
+
+4)Print all the subsets of a set of first n natural numbers
+
+n = 3;
+
+(1,2,3)
+
+//time complexity O(2^n)  
+
+import java.util.*;
+
+public class Recursion3 {
+
+    public static void printSubset(ArrayList<Integer> subset) {
+        for (int i = 0; i < subset.size(); i++) {
+            System.out.print(subset.get(i) + " ");
+        }
+        System.out.println();
+    }
+
+    public static void findSubsets(int n, ArrayList<Integer> subset) {
+        if (n == 0) {
+            printSubset(subset);
+            return;
+        }
+
+        // add
+        subset.add(n);
+        findSubsets(n - 1, subset);
+
+        // not add
+        subset.remove(subset.size() - 1);
+        findSubsets(n - 1, subset);
+    }
+
+    public static void main(String[] args) {
+        int n = 3;
+        ArrayList<Integer> subset = new ArrayList<>();
+        findSubsets(n, subset);
+
+    }
+}

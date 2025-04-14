@@ -1,0 +1,45 @@
+=============================Quick Sort=====================================
+
+
+Time Complexity
+
+worse case  = O(n^2)
+
+Average case = O(nlogn)
+
+
+
+
+
+In Which case quick sort occurs worst time Complexity
+
+
+When pivot is always the smallest or the largest or the
+largest element.
+
+Finally sorted array
+it will be ascending order or descending order array 
+time Complexity  O(n2)
+
+1 2 3 4 5                    n
+
+               5 is pivot 
+
+     1 2 3 4                n-1
+
+         4
+   1 2 3                    n-2
+     3
+ 1 2                        n-3
+
+ 1  2                       n-4 
+
+
+ n + n-1+n-2....n 
+ This is Arithmetic Progression 
+
+ n(n+1)/2  == O(n^2);
+
+ No need extra memory to make extra as compare to merged sort
+
+ Mostly get Average time complexity O(nlogn);
